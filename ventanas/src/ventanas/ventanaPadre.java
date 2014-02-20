@@ -1,26 +1,30 @@
 package ventanas;
+import javax.swing.JButton;
 import javax.swing.JFrame;
-public class ventanaPadre extends JFrame
+public class VentanaPadre extends JFrame
 {
 	private int altura=0;
 	private int ancho=0;
 	private String titulo=" ";
+	JButton btn;
 	
-	public void ventanaNew(int ancho, int altura, String titulo)
+	public VentanaPadre(int ancho, int altura, String titulo)
 	{
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(ancho, altura);
 		this.setTitle(titulo);
+		btn = new JButton ("hola mundo");
+		add(btn);
 		this.setVisible(true);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
 	
-	public void ventanaNew()
+	public VentanaPadre()
 	{
-		this.setSize(ancho, altura);
-		this.setTitle(titulo);
-		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		btn = new JButton ("hola mundo");
+		add(btn);
+		
 	}
 	
 	public void setAltura(int altura)
