@@ -1,6 +1,9 @@
 package ventanas;
+import java.awt.BorderLayout;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JTextArea;
 public class VentanaPadre extends JFrame
 {
 	private int altura=0;
@@ -21,9 +24,16 @@ public class VentanaPadre extends JFrame
 	
 	public VentanaPadre()
 	{
+		
+		btn = new JButton ("hola mundo grafico");
+		setLayout(new BorderLayout());
+		add(btn, BorderLayout.NORTH);
+		add(new JButton("sur"), BorderLayout.SOUTH);
+		add(new TextPanel(), BorderLayout.CENTER);
+		add(new JButton("este"), BorderLayout.EAST);
+		add(new JButton("oeste"), BorderLayout.WEST);
+		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		btn = new JButton ("hola mundo");
-		add(btn);
 		
 	}
 	
